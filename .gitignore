@@ -1,0 +1,4 @@
+node_modules/
+.eslintrc
+__backup.js
+.sublime*

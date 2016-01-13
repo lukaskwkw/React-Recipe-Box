@@ -1,0 +1,47 @@
+{
+    "globals" :
+    {
+        "jQuery": true,
+        "$": true,
+        "React": true,
+"ReactDOM": true
+    },
+        "rules": {
+            "quotes": [
+            2,
+            "single"
+            ],
+            "linebreak-style": [
+            2,
+            "unix"
+            ],
+            "semi": [
+            2,
+            "always"
+            ]
+            },
+            "env": {
+                "es6": true,
+                "node": true,
+                "browser": true
+                },
+                "extends": "eslint:recommended",
+                "rules": {
+    // Tons of rules you can use, for example...
+    //"quotes": [1, "double"],
+    "no-console": 1,
+    "no-undef": 1,
+    "no-unused-expressions": 1,
+    "no-unused-vars": 1,
+    "no-use-before-define": 0
+    },
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules": true,
+        "experimentalObjectRestSpread": true
+        },
+        "plugins": [
+        "react",
+        "html"
+        ]
+    }

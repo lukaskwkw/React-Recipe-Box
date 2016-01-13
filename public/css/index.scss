@@ -1,0 +1,219 @@
+#content {
+}
+
+
+$md : 520px;
+$lg : 1400px;
+
+.heading
+{
+    margin-top: 4%;    
+    text-align: center;
+    font-family: serif;
+    font-size: -webkit-xxx-large;
+    color: #ccc;
+    >span{
+        font-family: Tahoma, Geneva, sans-serif;
+        color: #5CB85C;
+        letter-spacing: -3px;
+    }
+}
+.panel,
+.panel-heading {
+    overflow: hidden;
+    border-radius: 0;
+    margin: 0;
+}
+
+
+.panel {
+    margin: auto;
+    @media screen and (min-width: $md) {
+        width: 500px;
+    }    
+    @media screen and (min-width: $lg) {
+        width: 750px;
+    }
+}
+
+.panel-body {
+    transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    overflow-y: scroll;
+}
+
+.main-image>img {
+    margin: auto
+}
+
+.new-btn {
+    display: block;
+    text-align: center;
+    margin: 3% auto;
+}
+
+.slideDown {
+    max-height: 600px;
+    max-height: 100vh;
+    padding: 15px;
+    opacity: 1;
+}
+
+.panel-heading {
+    transition: background-color .4s ease;
+    @media screen and (max-width: $md) {
+    transition: none;    
+    }
+    position: relative;
+}
+
+.panel-heading:hover {
+    background-color: darken(#337ab7, 10%);
+    cursor: pointer;
+}
+.wrapper_modal{
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(#000000, 0.5);
+}
+.edit {
+    display: block;
+    margin: auto;
+    margin-top: 2%;
+
+    font-family: monospace;
+    font-variant: small-caps;
+}
+.delete {
+    color: darken(#337ab7, 15%);
+    position: absolute;
+    right: .5%;
+    top: 20%;
+    font-size: 1.8em;
+    cursor: pointer;
+    &:hover {
+        color: #d43f3a;
+    }
+}
+
+.my_modal {
+    display:none;
+    position: absolute;
+    top: 10%;
+
+    width: 100%;
+    // height: 50vmin;
+    // margin: auto;
+    @media screen and (min-width: $md){
+        width: 500px;
+        left: 50%;
+        margin-left: -250px;
+
+    }
+    background-color: #FFF;
+
+    .crossMark {
+        position: absolute;
+        right: .5%;
+        top: 1%;
+        font-size: 1.8em;
+        cursor: pointer;
+        color: #aaa;
+        &:hover {
+            color: #666;
+        }
+    }
+    .modal-heading {
+        text-align: center;
+    }
+    .url {
+        margin-top: 2%;
+        width: 100%;
+    }
+    #add-input {
+        display: block;
+        margin: 3% auto;
+    }
+}
+
+
+///////////////
+//CSS LOADER //
+///////////////
+
+.wrapper {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: auto;
+    display: block;
+    width: 185px;
+}
+
+.cssload-loader {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    margin: 3em;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    background:rgb(0,0,0);
+}
+.cssload-loader,
+.cssload-loader:before,
+.cssload-loader:after {
+    animation: 1.15s infinite ease-in-out;
+    -o-animation: 1.15s infinite ease-in-out;
+    -ms-animation: 1.15s infinite ease-in-out;
+    -webkit-animation: 1.15s infinite ease-in-out;
+    -moz-animation: 1.15s infinite ease-in-out;
+}
+.cssload-loader:before,
+.cssload-loader:after {
+    width: 100%; 
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cssload-loader { animation-name: cssload-loader;
+    -o-animation-name: cssload-loader;
+    -ms-animation-name: cssload-loader;
+    -webkit-animation-name: cssload-loader;
+    -moz-animation-name: cssload-loader; }
+
+
+    @keyframes cssload-loader {
+        from { transform: scale(0); opacity: 1; }
+        to   { transform: scale(1); opacity: 0; }
+    }
+
+    @-o-keyframes cssload-loader {
+        from { -o-transform: scale(0); opacity: 1; }
+        to   { -o-transform: scale(1); opacity: 0; }
+    }
+
+    @-ms-keyframes cssload-loader {
+        from { -ms-transform: scale(0); opacity: 1; }
+        to   { -ms-transform: scale(1); opacity: 0; }
+    }
+
+    @-webkit-keyframes cssload-loader {
+        from { -webkit-transform: scale(0); opacity: 1; }
+        to   { -webkit-transform: scale(1); opacity: 0; }
+    }
+
+    @-moz-keyframes cssload-loader {
+        from { -moz-transform: scale(0); opacity: 1; }
+        to   { -moz-transform: scale(1); opacity: 0; }
+    }
